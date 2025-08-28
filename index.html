@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>【在籍生徒様限定】お友だち紹介キャンペーン｜トリイミュージック</title>
+  <meta name="description" content="在籍生徒さま限定の紹介キャンペーン。9/1〜10/31の期間中にトリイミュージック各教室をご紹介いただき、その方がご入会された場合、素敵なプレゼントを進呈します。この機会にぜひお知り合いをご紹介ください" />
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WHZRZKGG');
+  </script>
+  <!-- End Google Tag Manager -->
+  <style>
+    :root{
+      --brand:#0ea5e9;--brand-dark:#0284c7;--ink:#0f172a;--sub:#475569;--bg:#f8fafc;--card:#ffffff;
+      --ok:#16a34a;--warn:#f59e0b;--error:#ef4444;--radius:16px;--shadow:0 6px 24px rgba(2,8,23,.08);
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,'Noto Sans JP','Hiragino Kaku Gothic ProN','Hiragino Sans',YuGothic,'Meiryo',sans-serif;color:var(--ink);background:var(--bg)}
+    a{color:var(--brand);text-decoration:none} a:hover{opacity:.9}
+    .container{max-width:1000px;margin-inline:auto;padding:24px}
+    .hero{position:relative;padding:60px 0;overflow:hidden;text-align:center}
+    .hero::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:100vw;height:100%;
+      background-image:url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=2070');background-size:cover;background-position:center;z-index:1}
+    .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(224,242,254,.85),rgba(240,249,255,.85));z-index:2}
+    .hero .container{position:relative;z-index:3}
+    .badge{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid #e2e8f0;color:#0f172a;border-radius:999px;padding:6px 12px;font-weight:600;box-shadow:var(--shadow)}
+    .hero h1{font-size:clamp(24px,3.4vw,40px);line-height:1.2;margin:16px 0 8px}
+    .hero p{color:var(--sub);font-size:clamp(14px,2.2vw,18px);margin:0 0 16px}
+    .cta-row{display:flex;flex-wrap:wrap;gap:16px;margin-top:24px;justify-content:center}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 18px;border-radius:12px;border:1px solid transparent;font-weight:700;cursor:pointer;transition:.2s;white-space:nowrap}
+    .btn-primary{background:var(--brand);color:#fff}.btn-primary:hover{background:var(--brand-dark)}
+    .btn-outline{background:#fff;border-color:#e2e8f0;color:var(--ink)}
+    .cta-row .btn{width:220px}
+    .grid{display:grid;gap:16px}
+    @media(min-width:900px){.grid-2{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(3,1fr)}}
+    .card{background:var(--card);border:1px solid #e2e8f0;border-radius:var(--radius);box-shadow:var(--shadow);padding:20px}
+    .card h3{margin:0 0 10px;font-size:20px}
+    .list{margin:0;padding-left:18px;color:var(--sub)}
+    .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+    .kpi{background:#fff;border:1px dashed #bae6fd;border-radius:12px;padding:12px;text-align:center}.kpi b{font-size:20px;display:block}
+    .note{font-size:13px;color:var(--sub)}
+    .section{margin-top:36px}
+    .section h2{font-size:22px;margin:0 0 16px;position:relative;padding-left:14px}
+    .section h2::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:4px;height:22px;background-color:var(--brand);border-radius:4px}
+    form{display:grid;gap:12px}
+    label{font-weight:600}
+    input,select,textarea{width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:10px;font-size:16px}
+    .helper{font-size:12px;color:var(--sub)}
+    .faq dt{font-weight:700;margin-top:10px}.faq dd{margin:6px 0 14px;color:var(--sub)}
+    .footer{margin-top:36px;color:var(--sub);font-size:13px}
+    .hidden{display:none}.success{border:1px solid #bbf7d0;background:#f0fdf4;color:#14532d;border-radius:12px;padding:12px}
+    .error{border:1px solid #fecaca;background:#fef2f2;color:#7f1d1d;border-radius:12px;padding:12px}
+    .terms{font-size:14px;color:var(--sub)}
+    .terms{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid #e2e8f0;border-radius:var(--radius);box-shadow:var(--shadow);padding:16px 20px;cursor:pointer;transition:background-color .2s}
+    .terms:hover{background-color:#f8fafc}
+    .terms input[type="checkbox"]{width:1.5em;height:1.5em;flex-shrink:0}
+    .course-link-box{display:flex;align-items:center;gap:12px;padding:14px 18px;background-color:#f0f9ff;border:1px solid #bae6fd;border-radius:12px;color:var(--ink);font-weight:600;text-decoration:none;transition:all .2s}
+    .course-link-box:hover{border-color:var(--brand);background-color:#e0f2fe;box-shadow:0 4px 16px rgba(2,8,23,.07);transform:translateY(-2px)}
+    .course-link-box .icon-arrow{display:inline-flex;justify-content:center;align-items:center;flex-shrink:0;width:24px;height:24px;background-color:var(--brand);color:#fff;border-radius:50%;font-weight:700;font-size:16px;line-height:1}
+
+    /* === 特典セクション（2段×2段・行ごと等高） === */
+    .gift-grid{display:grid;gap:20px}
+    @media(min-width:769px){
+      .gift-row{display:grid;grid-template-columns:1fr 2fr;gap:32px;align-items:stretch;min-height:220px}
+      .gift-img img{width:100%;height:100%;object-fit:cover;border-radius:8px;box-shadow:var(--shadow)}
+      .gift-text{display:flex;flex-direction:column;justify-content:center}
+    }
+    @media(max-width:768px){
+      .gift-row{display:block}
+      .gift-img img{width:100%;height:auto;border-radius:8px;box-shadow:var(--shadow);margin-bottom:12px}
+      .gift-text{text-align:center}
+    }
+    .gift-text h4{margin:0 0 8px;font-size:18px;color:var(--brand)}
+    .gift-text p{margin:0 0 1.5em;line-height:1.7}
+    .gift-text p:last-child{margin-bottom:0}
+    /* ====== Mobile UX 強化（～480px） ====== */
+@media (max-width: 480px) {
+  .container { padding: 18px; }
+  .section { margin-top: 28px; }
+
+  .hero { padding: 44px 0; }
+  .hero h1 { font-size: clamp(22px, 7vw, 28px); }
+  .hero p { font-size: 15px; }
+
+  .section h2 { font-size: 20px; }
+  .card { padding: 16px; }
+
+  .btn { width: 100% !important; padding: 14px 16px; font-size: 16px; }
+  .cta-row { gap: 10px; }
+
+  input, select, textarea {
+    padding: 14px;
+    font-size: 16px;  /* iOSの拡大防止＆可読性 */
+  }
+
+  .kpis { grid-template-columns: 1fr; gap: 8px; }
+
+  /* 特典セクションの行間を少し詰めてスクロール軽減 */
+  .gift-text p { line-height: 1.6; margin-bottom: 1.1em; }
+}
+
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHZRZKGG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header class="hero">
+    <div class="container">
+      <span class="badge">在籍生徒さま限定｜お友だち紹介キャンペーン</span>
+      <h1>9/1（日）〜10/31（金）<br/>ご紹介で<strong>ご入会が決まったら</strong>紹介者に特典進呈！</h1>
+      <p>トリイミュージックのレッスンが好き！そんなあなたの「おすすめ」を応援します。<br/>在籍生徒さまがご家族・ご友人をご紹介 → ご入会決定で、<strong>素敵なプレゼント</strong>をお渡しします。</p>
+      <div class="kpis">
+        <div class="kpi"><b>対象期間</b>9/1〜10/31</div>
+        <div class="kpi"><b>対象</b>トリイミュージック在籍の皆様</div>
+        <div class="kpi"><b>特典</b>QUOカードPay or 商品券</div>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#entry" id="cta_form">紹介フォームへ</a>
+        <a class="btn btn-outline" href="#how" id="cta_how">流れを確認する</a>
+      </div>
+      <p class="note">※ ご入会＝初回お月謝のお支払い完了時点とします。</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="how" class="section">
+      <h2>お申込み方法（2ステップ）</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>① 紹介フォーム送信</h3>
+          <p class="note">在籍生徒（紹介者）様が、下のフォームに必要事項を入力して送信してください。</p>
+          <a class="btn btn-outline" href="#entry">紹介フォームへ進む</a>
+        </div>
+        <div class="card">
+          <h3>② ご入会で特典進呈</h3>
+          <p class="note">ご紹介先様が体験レッスンを経てご入会されたら、紹介者様へ特典をお渡しします。</p>
+          <p class="helper">在籍継続の確認後、1週間程度でお渡しします。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gift" class="section">
+      <h2>特典内容</h2>
+      <div class="card">
+        <div class="gift-grid">
+          <!-- 1行目：QUOカード × 紹介者向けテキスト -->
+          <div class="gift-row">
+            <div class="gift-img">
+              <img src="images/st010080.png" alt="QUOカードPay イメージ">
+            </div>
+            <div class="gift-text">
+              <h4>🎁 ご紹介者様（あなた）への特典</h4>
+              <p>
+                紹介1件につき、お好きな特典を1つプレゼント！<br>
+                ✅ <strong>QUOカードPay 1,000円分</strong><br>
+                ✅ <strong>トリイ商品券1,500円分</strong><br>
+                <span class="note">※同一家族内の複数紹介もOK（上限なし）</span>
+              </p>
+            </div>
+          </div>
+          <!-- 2行目：商品券 × 入会者向けテキスト -->
+          <div class="gift-row">
+            <div class="gift-img">
+              <img src="images/IMG_4901[1].jpg" alt="トリイ商品券 イメージ">
+            </div>
+            <div class="gift-text">
+              <h4>🎉 ご入会者様への特典</h4>
+              <p>
+                ご紹介で入会されたお友だちも特典GET！<br>
+                ✅ <strong>入会金が半額</strong>になります！
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="entry" class="section">
+      <h2>紹介フォーム</h2>
+      <div id="msg" class="hidden"></div>
+      <form id="referralForm" method="post" action="https://formspree.io/f/mldwevkj" novalidate>
+        <fieldset class="card" style="border:0">
+          <legend style="font-weight:700;margin-bottom:8px">紹介者（在籍生徒）情報</legend>
+          <label>あなた（紹介してくださる方）のお名前<span class="helper"> 例：山田 花子</span>
+            <input type="text" name="referrer_name" required />
+          </label>
+          <label>お通いの教室
+            <select name="referrer_center" required>
+              <option value="">選択してください</option>
+              <option>今津本店</option>
+              <option>あどがわセンター</option>
+              <option>大津わにセンター</option>
+              <option>朽木センター</option>
+            </select>
+          </label>
+          <label>ご連絡先（電話またはメール）
+            <input type="text" name="referrer_contact" />
+          </label>
+        </fieldset>
+        <fieldset class="card" style="border:0">
+          <legend style="font-weight:700;margin-bottom:8px">ご紹介（お知り合い）情報</legend>
+          <p class="helper" style="margin-bottom:12px;">※ わかる範囲でご入力ください。詳細は後ほどスタッフよりご確認させていただきます。</p>
+          <label>紹介したい方のお名前<span class="helper"> 例：佐藤 太郎</span>
+            <input type="text" name="friend_name" required />
+          </label>
+          <label>年齢（学年）
+            <input type="text" name="friend_guardian" />
+          </label>
+          <a href="https://www.toriimusic.co.jp/school/" class="course-link-box" target="_blank" rel="noopener">
+            <span class="icon-arrow">→</span>
+            どんなコースがあるか公式サイトで見てみる
+          </a>
+          <label>希望コース
+            <select name="friend_course" required>
+              <option value="">選択してください</option>
+              <option>ヤマハ音楽教室</option>
+              <option>ピアノ</option>
+              <option>エレクトーン</option>
+              <option>ヴァイオリン</option>
+              <option>サックス</option>
+              <option>ドラム</option>
+              <option>ギター</option>
+              <option>ヴォーカル＆ヴォイトレ</option>
+              <option>ベースギター</option>
+              <option>アコースティックギター</option>
+              <option>英語</option>
+              <option>プログラミング</option>
+              <option>その他</option>
+            </select>
+          </label>
+          <label>希望センター
+            <select name="friend_center">
+              <option value="">選択してください</option>
+              <option>今津本店</option>
+              <option>あどがわセンター</option>
+              <option>大津わにセンター</option>
+              <option>朽木センター</option>
+            </select>
+          </label>
+          <label>電話番号またはメールアドレス
+            <input type="tel" name="friend_phone" />
+          </label>
+          <label>ご質問欄（任意）
+            <textarea name="friend_notes" rows="3" placeholder="ご都合の良い時間帯、連絡方法など"></textarea>
+          </label>
+        </fieldset>
+        <label class="terms">
+          <input type="checkbox" name="agree" required />
+          <span><a href="https://www.toriimusic.co.jp/privacy_policy/" target="_blank" rel="noopener">個人情報の取り扱い</a>と<a href="#rules">キャンペーン規約</a>に同意します</span>
+        </label>
+        <button class="btn btn-primary" type="submit" id="btn_submit">この内容で送信する</button>
+      </form>
+    </section>
+
+    <section id="rules" class="section">
+      <h2>紹介キャンペーン規約</h2>
+      <div class="card terms">
+        <ol class="list">
+          <li>対象期間は<strong>2025年9月1日〜10月31日</strong>のご紹介・お申込みです。</li>
+          <li>特典進呈の条件は、ご紹介先の<strong>入会手続き完了（初回月謝ご入金）</strong>をもって成立とします。</li>
+          <li>紹介者はトリイミュージック在籍生徒（または保護者）に限ります。</li>
+          <li>特典は<strong>紹介件数ごと</strong>に進呈します。</li>
+          <li>ご紹介先が過去１年以内に在籍していた場合は対象外となる場合があります。</li>
+          <li>同一の入会に対して紹介者が重複した場合、先着の申請を有効とします。</li>
+          <li>虚偽申請・不正が判明した場合は、進呈を取り消します。</li>
+          <li>本キャンペーン内容は予告なく変更・終了する場合があります。</li>
+          <li>個人情報は教室運営・本企画の運用目的にのみ利用します。</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <h2>よくある質問</h2>
+      <dl class="faq card">
+        <dt>どのコースでも対象ですか？</dt>
+        <dd>ドレミぱーく以外のすべてのコースが対象となります。</dd>
+        <dt>特典はいつ受け取れますか？</dt>
+        <dd>ご入会手続き完了・在籍確認後にお渡しします（目安：1週間以内）。</dd>
+        <dt>紹介上限はありますか？</dt>
+        <dd>ございません。</dd>
+        <dt>紹介者が体験のみでは対象になりますか？</dt>
+        <dd>体験のみは対象外です。ご入会確定が必要です。</dd>
+      </dl>
+    </section>
+
+    <section class="section">
+      <h2>お問い合わせ</h2>
+      <div class="card">
+        <p>お電話：<a href="tel:0740-22-2063" id="tel_link">0740-22-2063</a> ／ LINE：<a href="https://lin.ee/MMgT872" id="line_link" target="_blank" rel="noopener">公式LINEで問い合わせ</a></p>
+        <p class="note">受付時間：10:30–19:30（月曜定休）／ 運営：株式会社トリイ</p>
+      </div>
+    </section>
+
+    <footer class="container footer">
+      <p>©2025 Torii Music Co., Ltd. All rights reserved.</p>
+    </footer>
+  </main>
+
+  <script>
+    function pushEvent(name, params){
+      if(window.dataLayer){ window.dataLayer.push(Object.assign({event:name}, params||{})); }
+    }
+    document.getElementById('cta_form').addEventListener('click',()=>pushEvent('referral_autumn2025_cta_form'));
+    document.getElementById('cta_how').addEventListener('click',()=>pushEvent('referral_autumn2025_cta_how'));
+    document.getElementById('tel_link').addEventListener('click',()=>pushEvent('tel_click_referral_autumn2025'));
+    document.getElementById('line_link').addEventListener('click',()=>pushEvent('line_click_referral_autumn2025'));
+
+    // LINEシェアボタン（必要ならHTML側に <button id="btn_share_line">LINEでシェア</button> を追加）
+    const shareButton = document.getElementById('btn_share_line');
+    if (shareButton) {
+      shareButton.addEventListener('click', function(){
+        const url = location.href;
+        const text = 'トリイミュージック お友だち紹介キャンペーン（9/1〜10/31）\nこちらのページから申請できます→ ' + url;
+        const lineUrl = 'https://line.me/R/msg/text/?' + encodeURIComponent(text);
+        pushEvent('line_share_referral_autumn2025');
+        window.open(lineUrl,'_blank');
+      });
+    }
+
+    const form = document.getElementById('referralForm');
+    const msg = document.getElementById('msg');
+    const submitButton = document.getElementById('btn_submit');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const required = ['referrer_name','referrer_center','friend_name','friend_course','agree'];
+      for (const name of required) {
+        const el = form.querySelector(`[name="${name}"]`);
+        if (!el || (el.type === 'checkbox' ? !el.checked : !el.value.trim())) {
+          msg.className = 'error';
+          msg.textContent = '未入力の必須項目があります。ご確認ください。';
+          msg.scrollIntoView({ behavior: 'smooth' });
+          pushEvent('referral_autumn2025_submit_error', { field: name });
+          return;
+        }
+      }
+      const formData = new FormData(form);
+      const action = form.getAttribute('action');
+      submitButton.disabled = true;
+      submitButton.textContent = '送信中...';
+      try {
+        pushEvent('referral_autumn2025_submit_attempt');
+        const response = await fetch(action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (response.ok) {
+          msg.className = 'success';
+          msg.innerHTML = '送信を受け付けました。担当よりご連絡いたします。<br>控えはLINEまたはメールにてお送りします。';
+          msg.scrollIntoView({ behavior: 'smooth' });
+          pushEvent('form_submit_referral_autumn2025');
+          form.reset();
+        } else {
+          throw new Error('Network response was not ok.');
+        }
+      } catch (err) {
+        msg.className = 'error';
+        msg.textContent = '送信に失敗しました。時間を置いて再度お試しください。';
+        pushEvent('referral_autumn2025_submit_fail');
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = 'この内容で送信する';
+      }
+    });
+  </script>
+</body>
+</html>
