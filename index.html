@@ -103,6 +103,21 @@
   /* 特典セクションの行間を少し詰めてスクロール軽減 */
   .gift-text p { line-height: 1.6; margin-bottom: 1.1em; }
 }
+/* ====== Sticky CTA（スマホのみ表示） ====== */
+@media (max-width: 768px) {
+  .sticky-cta {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(248, 250, 252, 0.9); /* var(--bg)に近い */
+    backdrop-filter: saturate(150%) blur(6px);
+    border-top: 1px solid #e2e8f0;
+    padding: 10px 14px env(safe-area-inset-bottom);
+    z-index: 50;
+  }
+  .sticky-cta .btn { margin: 0; }
+}
 
   </style>
 </head>
@@ -297,6 +312,9 @@
         <p class="note">受付時間：10:30–19:30（月曜定休）／ 運営：株式会社トリイ</p>
       </div>
     </section>
+<div class="sticky-cta">
+  <a class="btn btn-primary" href="#entry">紹介フォームへ（1分で入力）</a>
+</div>
 
     <footer class="container footer">
       <p>©2025 Torii Music Co., Ltd. All rights reserved.</p>
