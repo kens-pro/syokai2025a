@@ -353,7 +353,7 @@
         });
         if (response.ok) {
           msg.className = 'success';
-          msg.innerHTML = '送信を受け付けました。担当よりご連絡いたします。<br>控えはLINEまたはメールにてお送りします。';
+          msg.innerHTML = '送信を受け付けました。あらためて担当よりご連絡いたします。';
           msg.scrollIntoView({ behavior: 'smooth' });
           pushEvent('form_submit_referral_autumn2025');
           form.reset();
