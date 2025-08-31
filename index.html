@@ -2,18 +2,18 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M5FLHD7469"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-M5FLHD7469');
+</script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>【在籍生徒様限定】お友だち紹介キャンペーン｜トリイミュージック</title>
   <meta name="description" content="在籍生徒さま限定の紹介キャンペーン。9/1〜10/31の期間中にトリイミュージック各教室をご紹介いただき、その方がご入会された場合、素敵なプレゼントを進呈します。この機会にぜひお知り合いをご紹介ください" />
-  <!-- Google Tag Manager -->
-  <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WHZRZKGG');
-  </script>
-  <!-- End Google Tag Manager -->
   <style>
     :root{
       --brand:#0ea5e9; --brand-dark:#0284c7; --ink:#0f172a; --sub:#475569; --bg:#f8fafc; --card:#ffffff;
@@ -127,11 +127,7 @@
   </style>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WHZRZKGG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-
-  <header class="hero">
+   <header class="hero">
     <div class="container">
       <span class="badge">在籍生徒さま限定｜お友だち紹介キャンペーン</span>
       <h1>9/1（日）〜10/31（金）<br/>ご紹介で<strong>ご入会が決まったら</strong>紹介者に特典進呈！</h1>
@@ -315,9 +311,11 @@
   </footer>
 
   <script>
-    function pushEvent(name, params){
-      if(window.dataLayer){ window.dataLayer.push(Object.assign({event:name}, params||{})); }
-    }
+   function pushEvent(name, params){
+  if(typeof gtag === 'function'){ 
+    gtag('event', name, params || {}); 
+  }
+}
     document.getElementById('cta_form').addEventListener('click',()=>pushEvent('referral_autumn2025_cta_form'));
     document.getElementById('cta_how').addEventListener('click',()=>pushEvent('referral_autumn2025_cta_how'));
     document.getElementById('tel_link').addEventListener('click',()=>pushEvent('tel_click_referral_autumn2025'));
