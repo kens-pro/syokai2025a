@@ -118,7 +118,307 @@
   }
   .sticky-cta .btn { margin: 0; }
 }
+/* 特典セクションのスタイル */
 
+    
+.incentive-card
+ {
+
+        
+background-color
+: white;
+
+        
+border-radius: 16px
+;
+
+        
+padding: 40px
+;
+
+        
+box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08
+);
+
+        
+border: 1px solid var
+(--color-border);
+
+    }
+
+    
+.incentive-section
+ {
+
+        
+display
+: flex;
+
+        gap: 
+30px
+;
+
+        
+align-items
+: center;
+
+    }
+
+    
+.incentive-images
+ {
+
+        
+flex: 1
+;
+
+        
+max-width: 300px
+;
+
+        
+display
+: flex;
+
+        
+flex-direction
+: column;
+
+        gap: 
+15px
+;
+
+    }
+
+    
+.incentive-images img
+ {
+
+        
+border-radius: 8px
+;
+
+        
+box-shadow: 0 4px 15px rgba(0,0,0,0.1
+);
+
+    }
+
+    
+.incentive-details
+ {
+
+        
+flex: 2
+;
+
+    }
+
+    
+.incentive-details h3
+ {
+
+        
+font-size: 1.5em
+;
+
+        
+color: #007bff; /* 元の画像に近い鮮やかな青に変更 */
+
+        
+margin-bottom: 15px
+;
+
+    }
+
+    
+.incentive-details p
+ {
+
+        
+margin-bottom: 20px
+;
+
+    }
+
+    
+.benefit-list
+ {
+
+        
+list-style
+: none;
+
+        
+padding-left: 0
+;
+
+        
+margin-bottom: 20px
+;
+
+    }
+
+    
+.benefit-list li
+ {
+
+        
+font-size: 1.1em
+;
+
+        
+font-weight: 500
+;
+
+        
+margin-bottom: 10px
+;
+
+        
+/* アイコン（絵文字）とテキストの間のスペースを調整 */
+
+        
+padding-left: 5px
+; 
+
+    }
+
+    
+.note
+ {
+
+        
+font-size: 0.9em
+;
+
+        
+color: #777
+;
+
+    }
+
+    
+.incentive-divider
+ {
+
+        
+border
+: none;
+
+        
+border-top: 1px solid var
+(--color-border);
+
+        
+margin: 40px 0
+;
+
+    }
+
+    
+/* スマートフォン用の調整 */
+
+    
+@media (max-width: 768px
+) {
+
+        
+.incentive-card
+ {
+
+            
+padding: 25px
+;
+
+        }
+
+        
+.incentive-section
+ {
+
+            
+flex-direction
+: column;
+
+        }
+
+        
+.incentive-images
+ {
+
+            
+max-width: 100%
+;
+
+            
+width: 100%
+;
+
+        }
+
+    }
+
+    
+.incentive-divider
+ {
+
+        
+border
+: none;
+
+        
+border-top: 1px solid var
+(--color-border);
+
+        
+margin: 40px 0
+;
+
+    }
+
+    
+/* スマートフォン用の調整 */
+
+    
+@media (max-width: 768px
+) {
+
+        
+.incentive-card
+ {
+
+            
+padding: 25px
+;
+
+        }
+
+        
+.incentive-section
+ {
+
+            
+flex-direction
+: column;
+
+        }
+
+        
+.incentive-images
+ {
+
+            
+max-width: 100%
+;
+
+            
+width: 100%
+;
+
+        }
+
+    }
   </style>
 </head>
 <body>
@@ -161,41 +461,128 @@
       </div>
     </section>
 
-    <section id="gift" class="section">
-      <h2>特典内容</h2>
-      <div class="card">
-        <div class="gift-grid">
-          <!-- 1行目：QUOカード × 紹介者向けテキスト -->
-          <div class="gift-row">
-            <div class="gift-img">
-              <img src="images/st010080.png" alt="QUOカードPay イメージ">
-            </div>
-            <div class="gift-text">
-              <h4>🎁 ご紹介者様（あなた）への特典</h4>
-              <p>
-                紹介1件につき、お好きな特典を1つプレゼント！<br>
-                ✅ <strong>QUOカードPay 1,000円分</strong><br>
-                ✅ <strong>トリイ商品券1,500円分</strong><br>
-                <span class="note">※同一家族内の複数紹介もOK（上限なし）</span>
-              </p>
-            </div>
-          </div>
-          <!-- 2行目：商品券 × 入会者向けテキスト -->
-          <div class="gift-row">
-            <div class="gift-img">
-              <img src="images/IMG_4901[1].jpg" alt="トリイ商品券 イメージ">
-            </div>
-            <div class="gift-text">
-              <h4>🎉 ご入会者様への特典</h4>
-              <p>
-                ご紹介で入会されたお友だちも特典GET！<br>
-                ✅ <strong>入会金が半額</strong>になります！
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<!-- ▼▼▼ ここから特典セクション ▼▼▼ -->
+
+
+<section id="incentives" class="section-padding">
+
+    
+<div class="container">
+
+        
+<h2>特典内容</h2>
+
+        
+<div class="incentive-card">
+
+
+            
+<!-- 1. ご紹介者様（あなた）への特典 -->
+
+            
+<div class="incentive-section">
+
+                
+<div class="incentive-images">
+
+                    
+<img src="https://via.placeholder.com/400x252/ffffff/333333?text=QUOカード画像" alt="QUOカード">
+
+                    
+<img src="https://via.placeholder.com/400x252/f8e71c/333333?text=平和堂商品券の画像" alt="平和堂商品券">
+
+                
+</div>
+
+                
+<div class="incentive-details">
+
+                    
+<h3>🎁 ご紹介者様 (あなた) への特典</h3>
+
+                    
+<p>紹介1件につき、お好きな特典を1つプレゼント！</p>
+
+                    
+<ul class="benefit-list">
+
+                        
+<li>✅ QUOカード 3,000円分</li>
+
+                        
+<li>✅ 平和堂商品券 3,000円分</li>
+
+                    
+</ul>
+
+                    
+<p class="note">※同一家族内の複数紹介もOK（上限なし）。ドレミぱーく他一部コースには適応されません。</p>
+
+                
+</div>
+
+            
+</div>
+
+
+            
+<!-- 区切り線 -->
+
+            
+<hr class="incentive-divider">
+
+
+            
+<!-- 2. ご入会者様（お友だち）への特典 -->
+
+            
+<div class="incentive-section">
+
+                
+<div class="incentive-images">
+
+                    
+<img src="https://via.placeholder.com/400x252/A6B9B0/FFFFFF?text=特典イメージイラスト" alt="入会特典のイメージイラスト">
+
+                
+</div>
+
+                
+<div class="incentive-details">
+
+                    
+<h3>🎉 ご入会者様への特典</h3>
+
+                    
+<p>ご紹介で入会されたお友だちも特典GET！</p>
+
+                     
+<ul class="benefit-list">
+
+                        
+<li>✅ 入会金が半額 (¥5,500→¥2,750) になります！</li>
+
+                        
+<li>✅ 体験なしなら入会金が ¥0</li>
+
+                    
+</ul>
+
+                
+</div>
+
+            
+</div>
+
+
+        
+</div>
+
+    
+</div>
+
+
+</section>
 
     <section id="entry" class="section">
       <h2>紹介フォーム</h2>
