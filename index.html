@@ -16,33 +16,36 @@
   <!-- End Google Tag Manager -->
   <style>
     :root{
-      --brand:#0ea5e9;--brand-dark:#0284c7;--ink:#0f172a;--sub:#475569;--bg:#f8fafc;--card:#ffffff;
-      --ok:#16a34a;--warn:#f59e0b;--error:#ef4444;--radius:16px;--shadow:0 6px 24px rgba(2,8,23,.08);
+      --brand:#0ea5e9; --brand-dark:#0284c7; --ink:#0f172a; --sub:#475569; --bg:#f8fafc; --card:#ffffff;
+      --ok:#16a34a; --warn:#f59e0b; --error:#ef4444; --radius:16px; --shadow:0 6px 24px rgba(2,8,23,.08);
+      --border-color: #e2e8f0;
     }
     *,*::before,*::after{box-sizing:border-box}
     html,body{margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,'Noto Sans JP','Hiragino Kaku Gothic ProN','Hiragino Sans',YuGothic,'Meiryo',sans-serif;color:var(--ink);background:var(--bg)}
-    a{color:var(--brand);text-decoration:none} a:hover{opacity:.9}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{opacity:.9}
     .container{max-width:1000px;margin-inline:auto;padding:24px}
     .hero{position:relative;padding:60px 0;overflow:hidden;text-align:center}
-    .hero::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:100vw;height:100%;
-      background-image:url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=2070');background-size:cover;background-position:center;z-index:1}
+    .hero::before{content:'';position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=2070');background-size:cover;background-position:center;z-index:1}
     .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(224,242,254,.85),rgba(240,249,255,.85));z-index:2}
     .hero .container{position:relative;z-index:3}
-    .badge{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid #e2e8f0;color:#0f172a;border-radius:999px;padding:6px 12px;font-weight:600;box-shadow:var(--shadow)}
+    .badge{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid var(--border-color);color:#0f172a;border-radius:999px;padding:6px 12px;font-weight:600;box-shadow:var(--shadow)}
     .hero h1{font-size:clamp(24px,3.4vw,40px);line-height:1.2;margin:16px 0 8px}
     .hero p{color:var(--sub);font-size:clamp(14px,2.2vw,18px);margin:0 0 16px}
     .cta-row{display:flex;flex-wrap:wrap;gap:16px;margin-top:24px;justify-content:center}
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 18px;border-radius:12px;border:1px solid transparent;font-weight:700;cursor:pointer;transition:.2s;white-space:nowrap}
-    .btn-primary{background:var(--brand);color:#fff}.btn-primary:hover{background:var(--brand-dark)}
-    .btn-outline{background:#fff;border-color:#e2e8f0;color:var(--ink)}
+    .btn-primary{background:var(--brand);color:#fff}
+    .btn-primary:hover{background:var(--brand-dark)}
+    .btn-outline{background:#fff;border-color:var(--border-color);color:var(--ink)}
     .cta-row .btn{width:220px}
     .grid{display:grid;gap:16px}
     @media(min-width:900px){.grid-2{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(3,1fr)}}
-    .card{background:var(--card);border:1px solid #e2e8f0;border-radius:var(--radius);box-shadow:var(--shadow);padding:20px}
+    .card{background:var(--card);border:1px solid var(--border-color);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px}
     .card h3{margin:0 0 10px;font-size:20px}
     .list{margin:0;padding-left:18px;color:var(--sub)}
     .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
-    .kpi{background:#fff;border:1px dashed #bae6fd;border-radius:12px;padding:12px;text-align:center}.kpi b{font-size:20px;display:block}
+    .kpi{background:#fff;border:1px dashed #bae6fd;border-radius:12px;padding:12px;text-align:center}
+    .kpi b{font-size:20px;display:block}
     .note{font-size:13px;color:var(--sub)}
     .section{margin-top:36px}
     .section h2{font-size:22px;margin:0 0 16px;position:relative;padding-left:14px}
@@ -51,373 +54,75 @@
     label{font-weight:600}
     input,select,textarea{width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:10px;font-size:16px}
     .helper{font-size:12px;color:var(--sub)}
-    .faq dt{font-weight:700;margin-top:10px}.faq dd{margin:6px 0 14px;color:var(--sub)}
+    .faq dt{font-weight:700;margin-top:10px}
+    .faq dd{margin:6px 0 14px;color:var(--sub)}
     .footer{margin-top:36px;color:var(--sub);font-size:13px}
-    .hidden{display:none}.success{border:1px solid #bbf7d0;background:#f0fdf4;color:#14532d;border-radius:12px;padding:12px}
+    .hidden{display:none}
+    .success{border:1px solid #bbf7d0;background:#f0fdf4;color:#14532d;border-radius:12px;padding:12px}
     .error{border:1px solid #fecaca;background:#fef2f2;color:#7f1d1d;border-radius:12px;padding:12px}
-    .terms{font-size:14px;color:var(--sub)}
-    .terms{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid #e2e8f0;border-radius:var(--radius);box-shadow:var(--shadow);padding:16px 20px;cursor:pointer;transition:background-color .2s}
+    .terms{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--border-color);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px 20px;cursor:pointer;transition:background-color .2s;font-size:14px;color:var(--sub)}
     .terms:hover{background-color:#f8fafc}
     .terms input[type="checkbox"]{width:1.5em;height:1.5em;flex-shrink:0}
     .course-link-box{display:flex;align-items:center;gap:12px;padding:14px 18px;background-color:#f0f9ff;border:1px solid #bae6fd;border-radius:12px;color:var(--ink);font-weight:600;text-decoration:none;transition:all .2s}
     .course-link-box:hover{border-color:var(--brand);background-color:#e0f2fe;box-shadow:0 4px 16px rgba(2,8,23,.07);transform:translateY(-2px)}
     .course-link-box .icon-arrow{display:inline-flex;justify-content:center;align-items:center;flex-shrink:0;width:24px;height:24px;background-color:var(--brand);color:#fff;border-radius:50%;font-weight:700;font-size:16px;line-height:1}
-
-    /* === 特典セクション（2段×2段・行ごと等高） === */
-    .gift-grid{display:grid;gap:20px}
-    @media(min-width:769px){
-      .gift-row{display:grid;grid-template-columns:1fr 2fr;gap:32px;align-items:stretch;min-height:220px}
-      .gift-img img{width:100%;height:100%;object-fit:cover;border-radius:8px;box-shadow:var(--shadow)}
-      .gift-text{display:flex;flex-direction:column;justify-content:center}
-    }
-    @media(max-width:768px){
-      .gift-row{display:block}
-      .gift-img img{width:100%;height:auto;border-radius:8px;box-shadow:var(--shadow);margin-bottom:12px}
-      .gift-text{text-align:center}
-    }
-    .gift-text h4{margin:0 0 8px;font-size:18px;color:var(--brand)}
-    .gift-text p{margin:0 0 1.5em;line-height:1.7}
-    .gift-text p:last-child{margin-bottom:0}
-    /* ====== Mobile UX 強化（～480px） ====== */
-@media (max-width: 480px) {
-  .container { padding: 18px; }
-  .section { margin-top: 28px; }
-
-  .hero { padding: 44px 0; }
-  .hero h1 { font-size: clamp(22px, 7vw, 28px); }
-  .hero p { font-size: 15px; }
-
-  .section h2 { font-size: 20px; }
-  .card { padding: 16px; }
-
-  .btn { width: 100% !important; padding: 14px 16px; font-size: 16px; }
-  .cta-row { gap: 10px; }
-
-  input, select, textarea {
-    padding: 14px;
-    font-size: 16px;  /* iOSの拡大防止＆可読性 */
-  }
-
-  .kpis { grid-template-columns: 1fr; gap: 8px; }
-
-  /* 特典セクションの行間を少し詰めてスクロール軽減 */
-  .gift-text p { line-height: 1.6; margin-bottom: 1.1em; }
-}
-/* ====== Sticky CTA（スマホのみ表示） ====== */
-@media (max-width: 768px) {
-  .sticky-cta {
-    position: sticky;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(248, 250, 252, 0.9); /* var(--bg)に近い */
-    backdrop-filter: saturate(150%) blur(6px);
-    border-top: 1px solid #e2e8f0;
-    padding: 10px 14px env(safe-area-inset-bottom);
-    z-index: 50;
-  }
-  .sticky-cta .btn { margin: 0; }
-}
-/* 特典セクションのスタイル */
-
+    .incentive-card{background-color:var(--card);border-radius:var(--radius);padding:40px;box-shadow:var(--shadow);border:1px solid var(--border-color)}
+    .incentive-section{display:flex;gap:30px;align-items:center}
+    .incentive-images{flex:1;max-width:300px;display:flex;flex-direction:column;gap:15px}
+    .incentive-images img{border-radius:8px;box-shadow:var(--shadow);max-width:100%;height:auto}
+    .incentive-details{flex:2}
+    .incentive-details h3{font-size:1.5em;color:var(--brand);margin-bottom:15px;margin-top:0;}
+    .incentive-details p{margin-bottom:20px;line-height:1.7}
+    .benefit-list{list-style:none;padding-left:0;margin-bottom:20px}
+    .benefit-list li{font-size:1.1em;font-weight:500;margin-bottom:10px;padding-left:5px}
+    .incentive-divider{border:none;border-top:1px solid var(--border-color);margin:40px 0}
     
-.incentive-card
- {
-
-        
-background-color
-: white;
-
-        
-border-radius: 16px
-;
-
-        
-padding: 40px
-;
-
-        
-box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08
-);
-
-        
-border: 1px solid var
-(--color-border);
-
+    /* === ▼▼▼ 追従CTAボタンのスタイル修正 ▼▼▼ === */
+    /* PC表示用のスタイル */
+    .sticky-cta {
+      padding-top: 12px;
+      text-align: center;
+    }
+    .sticky-cta .btn {
+      width: 320px;
+      max-width: 100%;
     }
 
-    
-.incentive-section
- {
-
-        
-display
-: flex;
-
-        gap: 
-30px
-;
-
-        
-align-items
-: center;
-
+    /* モバイル表示用のスタイル（画面幅768px以下で適用） */
+    @media (max-width: 768px) {
+      .sticky-cta {
+        position: sticky;
+        bottom: 0;
+        background: rgba(248, 250, 252, 0.9);
+        backdrop-filter: saturate(150%) blur(6px);
+        border-top: 1px solid var(--border-color);
+        padding: 10px 14px;
+        padding-bottom: calc(10px + env(safe-area-inset-bottom)); /* iPhoneノッチ対応 */
+        z-index: 50;
+      }
+      .sticky-cta .btn {
+        width: 100%; /* スマホでは幅いっぱいに */
+        margin: 0;
+      }
     }
-
-    
-.incentive-images
- {
-
-        
-flex: 1
-;
-
-        
-max-width: 300px
-;
-
-        
-display
-: flex;
-
-        
-flex-direction
-: column;
-
-        gap: 
-15px
-;
-
-    }
-
-    
-.incentive-images img
- {
-
-        
-border-radius: 8px
-;
-
-        
-box-shadow: 0 4px 15px rgba(0,0,0,0.1
-);
-
-    }
-
-    
-.incentive-details
- {
-
-        
-flex: 2
-;
-
-    }
-
-    
-.incentive-details h3
- {
-
-        
-font-size: 1.5em
-;
-
-        
-color: #007bff; /* 元の画像に近い鮮やかな青に変更 */
-
-        
-margin-bottom: 15px
-;
-
-    }
-
-    
-.incentive-details p
- {
-
-        
-margin-bottom: 20px
-;
-
-    }
-
-    
-.benefit-list
- {
-
-        
-list-style
-: none;
-
-        
-padding-left: 0
-;
-
-        
-margin-bottom: 20px
-;
-
-    }
-
-    
-.benefit-list li
- {
-
-        
-font-size: 1.1em
-;
-
-        
-font-weight: 500
-;
-
-        
-margin-bottom: 10px
-;
-
-        
-/* アイコン（絵文字）とテキストの間のスペースを調整 */
-
-        
-padding-left: 5px
-; 
-
-    }
-
-    
-.note
- {
-
-        
-font-size: 0.9em
-;
-
-        
-color: #777
-;
-
-    }
-
-    
-.incentive-divider
- {
-
-        
-border
-: none;
-
-        
-border-top: 1px solid var
-(--color-border);
-
-        
-margin: 40px 0
-;
-
-    }
-
-    
-/* スマートフォン用の調整 */
-
-    
-@media (max-width: 768px
-) {
-
-        
-.incentive-card
- {
-
-            
-padding: 25px
-;
-
-        }
-
-        
-.incentive-section
- {
-
-            
-flex-direction
-: column;
-
-        }
-
-        
-.incentive-images
- {
-
-            
-max-width: 100%
-;
-
-            
-width: 100%
-;
-
-        }
-
-    }
-
-    
-.incentive-divider
- {
-
-        
-border
-: none;
-
-        
-border-top: 1px solid var
-(--color-border);
-
-        
-margin: 40px 0
-;
-
-    }
-
-    
-/* スマートフォン用の調整 */
-
-    
-@media (max-width: 768px
-) {
-
-        
-.incentive-card
- {
-
-            
-padding: 25px
-;
-
-        }
-
-        
-.incentive-section
- {
-
-            
-flex-direction
-: column;
-
-        }
-
-        
-.incentive-images
- {
-
-            
-max-width: 100%
-;
-
-            
-width: 100%
-;
-
-        }
-
+    /* === ▲▲▲ 追従CTAボタンのスタイル修正 ▲▲▲ === */
+
+    @media (max-width: 480px) {
+      .container{padding:18px}
+      .section{margin-top:28px}
+      .hero{padding:44px 0}
+      .hero h1{font-size:clamp(22px,7vw,28px)}
+      .hero p{font-size:15px}
+      .section h2{font-size:20px}
+      .card{padding:16px}
+      .btn{width:100%!important;padding:14px 16px;font-size:16px}
+      .cta-row{gap:10px}
+      input,select,textarea{padding:14px;font-size:16px}
+      .kpis{grid-template-columns:1fr;gap:8px}
+      .benefit-list li, .incentive-details p{line-height:1.6}
+      .incentive-card{padding:25px}
+      .incentive-section{flex-direction:column}
+      .incentive-images{max-width:100%;width:100%}
     }
   </style>
 </head>
@@ -455,135 +160,50 @@ width: 100%
         </div>
         <div class="card">
           <h3>② ご入会で特典進呈</h3>
-          <p class="note">ご紹介先様が体験レッスンを経てご入会されたら、紹介者様へ特典をお渡しします。</p>
+          <p class="note">ご紹介先様がご入会されましたら、紹介者様へ特典をお渡しします。</p>
           <p class="helper">在籍継続の確認後、1週間程度でお渡しします。</p>
         </div>
       </div>
     </section>
 
-<!-- ▼▼▼ ここから特典セクション ▼▼▼ -->
-
-
-<section id="incentives" class="section-padding">
-
-    
-<div class="container">
-
-        
-<h2>特典内容</h2>
-
-        
-<div class="incentive-card">
-
-
-            
-<!-- 1. ご紹介者様（あなた）への特典 -->
-
-            
-<div class="incentive-section">
-
-                
-<div class="incentive-images">
-
-                    
-<img src="images/st010080.png" alt="QUOカード">
-
-                    
-<img src="images/Gemini_Generated_Image_2eyhk22eyhk22eyh.png" alt="平和堂商品券">
-
-                
-</div>
-
-                
-<div class="incentive-details">
-
-                    
-<h3>🎁 ご紹介者様 (あなた) への特典</h3>
-
-                    
-<p>紹介1件につき、お好きな特典をいずれか1つプレゼント！</p>
-
-                    
-<ul class="benefit-list">
-
-                        
-<li>✅ QUOカード 3,000円分 または、</li>
-
-                        
-<li>✅ 平和堂商品券 3,000円分 からお選びください</li>
-
-                    
-</ul>
-
-                    
-<p class="note">※同一家族内の複数紹介もOK（上限なし）。</p>
-<p class="note">※適応外コース
-  <p class="note">ドレミぱーく・チケット制レッスン・おためし3回レッスン</p>
-                
-</div>
-
-            
-</div>
-
-
-            
-<!-- 区切り線 -->
-
-            
-<hr class="incentive-divider">
-
-
-            
-<!-- 2. ご入会者様（お友だち）への特典 -->
-
-            
-<div class="incentive-section">
-
-                
-<div class="incentive-images">
-
-                    
-<img src="images/Gemini_Generated_Image_q423puq423puq423.png" alt="入会特典のイメージイラスト">
-
-                
-</div>
-
-                
-<div class="incentive-details">
-
-                    
-<h3>🎉 ご入会者様への特典</h3>
-
-                    
-<p>ご紹介で入会されたお友だちも特典GET！</p>
-
-                     
-<ul class="benefit-list">
-
-                        
-<li>✅ 入会金が半額 (¥5,500→¥2,750) になります！</li>
-
-                        
-<li>✅ 体験なしなら入会金が ¥0</li>
-
-                    
-</ul>
-
-                
-</div>
-
-            
-</div>
-
-
-        
-</div>
-
-    
-</div>
-
-
-</section>
+    <section id="incentives" class="section">
+      <h2>特典内容</h2>
+      <div class="incentive-card">
+        <!-- 1. ご紹介者様（あなた）への特典 -->
+        <div class="incentive-section">
+          <div class="incentive-images">
+            <img src="images/st010080.png" alt="QUOカード">
+            <img src="images/Gemini_Generated_Image_2eyhk22eyhk22eyh.png" alt="平和堂商品券">
+          </div>
+          <div class="incentive-details">
+            <h3>🎁 ご紹介者様 (あなた) への特典</h3>
+            <p>紹介1件につき、お好きな特典をいずれか1つプレゼント！</p>
+            <ul class="benefit-list">
+              <li>✅ QUOカード 3,000円分 または、</li>
+              <li>✅ 平和堂商品券 3,000円分 からお選びください</li>
+            </ul>
+            <p class="note">※同一家族内の複数紹介もOK（上限なし）。<br>
+               ※適応外コース: ドレミぱーく・チケット制レッスン・おためし3回レッスン</p>
+          </div>
+        </div>
+        <!-- 区切り線 -->
+        <hr class="incentive-divider">
+        <!-- 2. ご入会者様（お友だち）への特典 -->
+        <div class="incentive-section">
+          <div class="incentive-images">
+            <img src="images/Gemini_Generated_Image_q423puq423puq423.png" alt="入会特典のイメージイラスト">
+          </div>
+          <div class="incentive-details">
+            <h3>🎉 ご入会者様への特典</h3>
+            <p>ご紹介で入会されたお友だちも特典GET！</p>
+            <ul class="benefit-list">
+              <li>✅ 入会金が半額 (¥5,500→¥2,750) になります！</li>
+              <li>✅ 体験なしなら入会金が ¥0</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section id="entry" class="section">
       <h2>紹介フォーム</h2>
@@ -597,10 +217,7 @@ width: 100%
           <label>お通いの教室
             <select name="referrer_center" required>
               <option value="">選択してください</option>
-              <option>今津本店</option>
-              <option>あどがわセンター</option>
-              <option>大津わにセンター</option>
-              <option>朽木センター</option>
+              <option>今津本店</option><option>あどがわセンター</option><option>大津わにセンター</option><option>朽木センター</option>
             </select>
           </label>
           <label>ご連絡先（電話またはメール）
@@ -623,28 +240,15 @@ width: 100%
           <label>希望コース
             <select name="friend_course" required>
               <option value="">選択してください</option>
-              <option>ヤマハ音楽教室</option>
-              <option>ピアノ</option>
-              <option>エレクトーン</option>
-              <option>ヴァイオリン</option>
-              <option>サックス</option>
-              <option>ドラム</option>
-              <option>ギター</option>
-              <option>ヴォーカル＆ヴォイトレ</option>
-              <option>ベースギター</option>
-              <option>アコースティックギター</option>
-              <option>英語</option>
-              <option>プログラミング</option>
-              <option>その他</option>
+              <option>ヤマハ音楽教室</option><option>ピアノ</option><option>エレクトーン</option><option>ヴァイオリン</option><option>サックス</option>
+              <option>ドラム</option><option>ギター</option><option>ヴォーカル＆ヴォイトレ</option><option>ベースギター</option>
+              <option>アコースティックギター</option><option>英語</option><option>プログラミング</option><option>その他</option>
             </select>
           </label>
           <label>希望センター
             <select name="friend_center">
               <option value="">選択してください</option>
-              <option>今津本店</option>
-              <option>あどがわセンター</option>
-              <option>大津わにセンター</option>
-              <option>朽木センター</option>
+              <option>今津本店</option><option>あどがわセンター</option><option>大津わにセンター</option><option>朽木センター</option>
             </select>
           </label>
           <label>電話番号またはメールアドレス
@@ -683,7 +287,7 @@ width: 100%
       <h2>よくある質問</h2>
       <dl class="faq card">
         <dt>どのコースでも対象ですか？</dt>
-        <dd>ドレミぱーく以外のすべてのコースが対象となります。</dd>
+        <dd>ドレミぱーく・チケット制レッスン・おためし3回レッスン以外のすべてのコースが対象となります。</dd>
         <dt>特典はいつ受け取れますか？</dt>
         <dd>ご入会手続き完了・在籍確認後にお渡しします（目安：1週間以内）。</dd>
         <dt>紹介上限はありますか？</dt>
@@ -700,14 +304,15 @@ width: 100%
         <p class="note">受付時間：10:30–19:30（月曜定休）／ 運営：株式会社トリイ</p>
       </div>
     </section>
-<div class="sticky-cta">
-  <a class="btn btn-primary" href="#entry">紹介フォームへ（1分で入力）</a>
-</div>
-
-    <footer class="container footer">
-      <p>©2025 Torii Music Co., Ltd. All rights reserved.</p>
-    </footer>
   </main>
+  
+  <div class="sticky-cta">
+    <a class="btn btn-primary" href="#entry">紹介フォームへ（1分で入力）</a>
+  </div>
+
+  <footer class="container footer">
+    <p>©2025 Torii Music Co., Ltd. All rights reserved.</p>
+  </footer>
 
   <script>
     function pushEvent(name, params){
@@ -718,7 +323,6 @@ width: 100%
     document.getElementById('tel_link').addEventListener('click',()=>pushEvent('tel_click_referral_autumn2025'));
     document.getElementById('line_link').addEventListener('click',()=>pushEvent('line_click_referral_autumn2025'));
 
-    // LINEシェアボタン（必要ならHTML側に <button id="btn_share_line">LINEでシェア</button> を追加）
     const shareButton = document.getElementById('btn_share_line');
     if (shareButton) {
       shareButton.addEventListener('click', function(){
